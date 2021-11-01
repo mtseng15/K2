@@ -3,7 +3,7 @@ clear all
 close all
 
 % Generate the Henon Map time series data
-N = 150;
+N = 15000;
 [X,Y] = Henon(1.4, 0.3, N, 0.1,0.3);
 figure 
 plot(X,Y, '*');
