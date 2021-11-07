@@ -8,9 +8,11 @@ K2 is an approximation of Kolmogorov-Sinai (KS) Entropy developed by [Peter Gras
 ## Henon Map Example
 The Henon Map is a two dimensional chaotic map. An example is shown below.
 ![Henon Map](./pics/Henon_Map.jpg)
+
 From it we can calculate the correlation integral for a range of values for *d* and *epsilon* as shown below.
 
 ![Correlation Integral](./pics/Correlation_Integral.jpg)
+
 From either calculating the slope by hand or running a linear point fitting on the lines we can see that *v = 1.2* which is the same as in Grassberger's paper.
 
 Then from calculating the K2 approximation, for progressivly higher measures *d*, we can find that *K2 ~ 0.3* which is correlated in Grassberger's paper.
