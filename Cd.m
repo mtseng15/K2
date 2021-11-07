@@ -1,6 +1,5 @@
-function C = Cd(X,Y,epsilon, d)
-	% Cd(epsilon from Grassberger's paper. This is for the two dimensions version where
-	% X and Y are the two time series dimensions respectively
+function C = Cd(X,epsilon, d)
+	% Cd(epsilon from Grassberger's paper. 
 
 	N = length(X);
 	% The number of pairs of points (n,m) who's measured magnitude is less than epsilon
@@ -13,7 +12,6 @@ function C = Cd(X,Y,epsilon, d)
 			theSum = 0;
 			for i = 1:1:d
 				theSum = theSum + (X(n+i) - X(m+i)).^2;
-				theSum = theSum + (Y(n+i) - Y(m+i)).^2;
 			end
 			if sqrt(theSum) < epsilon
 				p = p + 1;
