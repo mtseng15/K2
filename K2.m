@@ -20,12 +20,12 @@ function [k2, cd] = K2 (X, epsilon, d, dt)
 		end
 	end
 
-	K = zeros(length(epsilon), length(d)-1);
+	k2 = zeros(length(epsilon), length(d)-1);
 
 	% Note that you must divide by the dt
 	for j = 1:1:length(epsilon)
 		for i = 1:1:(length(d)-1)
-			K(j,i) = (1/dt)*log(cd((i),j)/cd((i+1), j));
+			k2(j,i) = (1/dt)*log(cd((i),j)/cd((i+1), j));
 		end
 	end
 end 

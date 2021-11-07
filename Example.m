@@ -7,6 +7,7 @@ close all
 N = 1500;
 [X,Y] = Henon(1.4, 0.3, N, 0.1,0.3);
 figure 
+set(gcf,'color','w');
 plot(X,Y, '*');
 title("Henon Map")
 xlabel("X")
@@ -23,6 +24,7 @@ dt = 2; % Since it's a discrete map with 2 degrees of freedom dt = 1*2.
 [k2, cd] = K2(X, epsilon, d, dt);
 
 figure
+set(gcf,'color','w');
 plot(log(epsilon), log(cd))
 title("Henon Map")
 xlabel("ln(\epsilon)")
@@ -32,6 +34,7 @@ legend("d = 2", "d = 4", "d = 6", "d = 8", "d = 10", "d = 12", "d = 14","Locatio
 % Remove the last entry in d to make things line up
 d(end) = [];
 figure
+set(gcf,'color','w');
 plot(d, k2)
 xlabel("d")
 ylabel("K_{2,d}(\epsilon)")
